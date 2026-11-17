@@ -1,0 +1,1033 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>亚洲宅男福利社-二次元资源与宅文化指南</title>
+<meta name="description" content="亚洲宅男福利社聚焦二次元资源整理与宅文化消费指南，覆盖新番导视、手办开箱、同人展情报、游戏评测与收藏避坑，用条目、日期与数字帮你看懂每一条内容值不值得追。">
+<meta name="keywords" content="亚洲宅男福利社">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1b2f'/%3E%3Ccircle cx='32' cy='30' r='14' fill='none' stroke='%23ff6b9d' stroke-width='4'/%3E%3Ccircle cx='26' cy='28' r='2.4' fill='%23ffe08a'/%3E%3Ccircle cx='38' cy='28' r='2.4' fill='%23ffe08a'/%3E%3Cpath d='M24 38c4 4 12 4 16 0' stroke='%23ffe08a' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#f6f4f9;
+  --surface:#ffffff;
+  --surface-2:#efeaf5;
+  --ink:#221d2e;
+  --ink-2:#4a4358;
+  --ink-3:#7a7288;
+  --line:#ddd5e6;
+  --brand:#5b2a86;
+  --brand-2:#8a3fb0;
+  --accent:#ff6b9d;
+  --accent-2:#ffe08a;
+  --ok:#2f8f6b;
+  --warn:#b0562a;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 2px 10px rgba(43,25,66,.08);
+  --shadow-lg:0 10px 30px rgba(43,25,66,.12);
+  --space:clamp(14px,2vw,22px);
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --topbar-h:38px;
+  --header-h:62px;
+  --sticky:calc(var(--topbar-h) + var(--header-h));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);
+  line-height:1.75;font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
+h2{font-size:clamp(20px,2.4vw,26px)}
+h3{font-size:clamp(17px,1.8vw,19px)}
+p{margin:0 0 1em}
+ul,ol{margin:0 0 1em;padding-left:1.5em}
+section[id],article[id],div[id]{scroll-margin-top:calc(var(--sticky) + 10px)}
+
+/* 公告条 */
+.topbar{
+  position:sticky;top:0;z-index:60;
+  height:var(--topbar-h);display:flex;align-items:center;
+  background:linear-gradient(90deg,#3a1a5c,#5b2a86 50%,#8a3fb0);
+  color:#f3e9ff;font-size:13px;overflow:hidden;
+}
+.topbar .wrap{display:flex;align-items:center;gap:10px;width:100%;max-width:1240px;margin:0 auto;padding:0 16px}
+.topbar .tag{background:rgba(255,107,157,.9);color:#2a0b3d;border-radius:99px;padding:1px 9px;font-weight:700;font-size:12px;white-space:nowrap}
+.topbar .ann{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .ann b{color:var(--accent-2);font-weight:600}
+.topbar a{color:#ffe6f1;margin-left:auto;white-space:nowrap;font-size:12px;text-decoration:underline}
+
+/* 页头 */
+.site-header{
+  position:sticky;top:var(--topbar-h);z-index:55;
+  background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  max-width:1240px;margin:0 auto;padding:0 16px;
+  height:var(--header-h);display:flex;align-items:center;gap:18px;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;color:var(--ink);white-space:nowrap}
+.brand:hover{text-decoration:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand .bname{letter-spacing:.5px}
+.main-nav{display:flex;gap:4px;margin-left:auto;flex-wrap:nowrap}
+.main-nav a{
+  padding:6px 11px;border-radius:99px;color:var(--ink-2);font-size:14px;font-weight:600;white-space:nowrap;
+}
+.main-nav a:hover{background:var(--surface-2);color:var(--brand);text-decoration:none}
+.main-nav a.active{background:var(--brand);color:#fff}
+.header-tools{display:flex;align-items:center;gap:10px}
+.search-box{position:relative}
+.search-box input{
+  width:180px;padding:7px 11px 7px 30px;border:1px solid var(--line);border-radius:99px;
+  background:var(--surface);font-size:13px;font-family:inherit;color:var(--ink);outline:none;
+  transition:border-color .2s,width .2s;
+}
+.search-box input:focus{border-color:var(--brand-2);width:210px}
+.search-box .ico{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:14px;height:14px;opacity:.5}
+.search-result{
+  position:absolute;top:calc(100% + 8px);right:0;width:290px;max-height:320px;overflow:auto;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow-lg);padding:6px;display:none;z-index:70;
+}
+.search-result.show{display:block}
+.search-result a{display:block;padding:8px 10px;border-radius:var(--radius-sm);font-size:13px;color:var(--ink-2)}
+.search-result a:hover{background:var(--surface-2);text-decoration:none}
+.search-result .empty{padding:14px 10px;font-size:13px;color:var(--ink-3)}
+.search-result .empty b{color:var(--warn)}
+.menu-btn{
+  display:none;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);
+  width:38px;height:38px;align-items:center;justify-content:center;cursor:pointer;padding:0;
+}
+.menu-btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.menu-btn svg{width:20px;height:20px}
+.mobile-menu{
+  display:none;border-top:1px solid var(--line);background:var(--surface);
+}
+.mobile-menu.open{display:block}
+.mobile-menu nav{max-width:1240px;margin:0 auto;padding:8px 16px 14px;display:flex;flex-wrap:wrap;gap:6px}
+.mobile-menu a{padding:7px 12px;border-radius:99px;background:var(--surface-2);font-size:14px;font-weight:600;color:var(--ink-2)}
+
+/* 布局 */
+.container{max-width:1240px;margin:0 auto;padding:0 16px}
+.layout{
+  display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:28px;align-items:start;
+  padding-top:28px;
+}
+main{min-width:0}
+aside{position:sticky;top:calc(var(--sticky) + 16px);min-width:0}
+.side-card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 18px;box-shadow:var(--shadow);margin-bottom:18px;
+}
+.side-card h3{font-size:15px;color:var(--brand);margin-bottom:10px}
+.side-nav{list-style:none;padding:0;margin:0}
+.side-nav a{display:block;padding:6px 10px;border-radius:var(--radius-sm);font-size:14px;color:var(--ink-2);border-left:3px solid transparent}
+.side-nav a:hover{background:var(--surface-2);text-decoration:none}
+.side-nav a.active{background:#f1e7fa;color:var(--brand);border-left-color:var(--brand-2);font-weight:700}
+.side-list{list-style:none;padding:0;margin:0;font-size:13.5px}
+.side-list li{padding:7px 0;border-bottom:1px dashed var(--line)}
+.side-list li:last-child{border-bottom:none}
+.side-list a{color:var(--ink-2)}
+.side-list .meta{color:var(--ink-3);font-size:12px;display:block}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  background:radial-gradient(circle at 82% 18%,rgba(255,107,157,.22),transparent 55%),
+             radial-gradient(circle at 10% 90%,rgba(138,63,176,.25),transparent 55%),
+             linear-gradient(135deg,#20142f,#3a1a5c 55%,#55207a);
+  color:#f4ecff;border-radius:var(--radius);padding:clamp(26px,4vw,46px);
+  margin-bottom:26px;box-shadow:var(--shadow-lg);
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:34px 34px;mask-image:linear-gradient(120deg,transparent 30%,#000 90%);
+}
+.hero-inner{position:relative;z-index:2;max-width:600px}
+.hero .kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.08em;
+  background:rgba(255,224,138,.16);border:1px solid rgba(255,224,138,.4);color:#ffe9b0;
+  padding:4px 12px;border-radius:99px;margin-bottom:14px;
+}
+.hero .kicker i{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block}
+.hero h1{font-size:clamp(28px,4.6vw,44px);color:#fff;margin-bottom:12px;letter-spacing:1px}
+.hero p.lede{font-size:clamp(14.5px,1.4vw,16.5px);color:#d9c9ee;line-height:1.85;margin-bottom:20px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+.btn{
+  display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:99px;
+  font-size:14px;font-weight:700;border:1px solid transparent;cursor:pointer;
+  transition:transform .18s,box-shadow .18s,background .18s;font-family:inherit;
+}
+.btn:hover{transform:translateY(-2px);text-decoration:none}
+.btn-primary{background:var(--accent);color:#2a0b3d;box-shadow:0 4px 14px rgba(255,107,157,.4)}
+.btn-primary:hover{background:#ff85ad}
+.btn-ghost{background:rgba(255,255,255,.08);color:#f4ecff;border-color:rgba(255,255,255,.3)}
+.btn-ghost:hover{background:rgba(255,255,255,.16)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:#c6b3dd;border-top:1px solid rgba(255,255,255,.14);padding-top:14px}
+.hero-stats b{color:#ffe08a;font-size:15px;margin-right:2px}
+.hero-art{
+  position:absolute;right:-20px;top:50%;transform:translateY(-50%);width:min(340px,42%);
+  opacity:.95;pointer-events:none;z-index:1;
+}
+@media(max-width:760px){.hero-art{display:none}}
+
+/* 通用板块 */
+.block{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:clamp(18px,2.4vw,26px);margin-bottom:22px;box-shadow:var(--shadow);
+}
+.block > h2{display:flex;align-items:center;gap:10px;padding-bottom:10px;border-bottom:2px solid var(--surface-2);margin-bottom:16px}
+.block > h2::before{content:"";width:6px;height:22px;border-radius:3px;background:linear-gradient(180deg,var(--accent),var(--brand-2));flex:none}
+.block .sub{font-size:13px;color:var(--ink-3);font-weight:400;margin-left:auto}
+
+/* 概览 grid */
+.overview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.ov-item{background:var(--surface-2);border-radius:var(--radius-sm);padding:12px 14px;border-left:3px solid var(--brand-2)}
+.ov-item b{display:block;font-size:20px;color:var(--brand);line-height:1.3}
+.ov-item span{font-size:12.5px;color:var(--ink-3)}
+
+/* 精选卡片 */
+.feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.feature-card{
+  display:flex;gap:14px;background:var(--surface-2);border-radius:var(--radius-sm);
+  padding:12px;border:1px solid transparent;transition:border-color .2s,transform .2s;
+}
+.feature-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.feature-card img{width:96px;height:96px;border-radius:10px;object-fit:cover;flex:none}
+.feature-card .fc-body{min-width:0}
+.feature-card .fc-tag{font-size:11.5px;font-weight:700;color:var(--accent);letter-spacing:.03em}
+.feature-card h3{font-size:15px;margin:3px 0 5px}
+.feature-card p{font-size:13px;color:var(--ink-2);margin:0}
+@media(max-width:520px){.feature-grid{grid-template-columns:1fr}.feature-card img{width:78px;height:78px}}
+
+/* 紧凑列表 */
+.updates{border-top:1px solid var(--line)}
+.update-row{
+  display:flex;gap:14px;align-items:baseline;padding:11px 0;border-bottom:1px dashed var(--line);
+}
+.update-row .date{font-size:12.5px;color:var(--brand-2);font-weight:700;white-space:nowrap;min-width:74px}
+.update-row .u-body{min-width:0;flex:1}
+.update-row .u-body a{font-weight:600;font-size:14.5px;color:var(--ink)}
+.update-row .u-body p{font-size:13px;color:var(--ink-3);margin:2px 0 0}
+.update-row .badge{font-size:11px;padding:2px 8px;border-radius:99px;background:#f1e7fa;color:var(--brand);font-weight:700;white-space:nowrap}
+
+/* 分类入口 标签索引 */
+.tag-index{display:flex;flex-wrap:wrap;gap:9px}
+.tag-index a{
+  padding:8px 15px;border-radius:99px;background:var(--surface-2);color:var(--ink-2);
+  font-size:13.5px;font-weight:600;border:1px solid var(--line);transition:background .18s,color .18s;
+}
+.tag-index a:hover{background:var(--brand);color:#fff;border-color:var(--brand);text-decoration:none}
+.tag-index a .n{opacity:.6;font-size:12px;margin-left:4px}
+
+/* 深度解析 */
+.article-main{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(18px,2.6vw,30px);margin-bottom:22px}
+.article-main > h2{margin-bottom:6px}
+.article-main .byline{font-size:12.5px;color:var(--ink-3);margin-bottom:18px;padding-bottom:14px;border-bottom:1px dashed var(--line)}
+.article-main h3{margin-top:1.5em;color:var(--brand);border-left:4px solid var(--accent);padding-left:10px}
+.article-main p{color:var(--ink-2)}
+.article-main strong{color:var(--ink)}
+.quote-card{
+  background:linear-gradient(135deg,#fbf3ff,#f6eefc);border-left:4px solid var(--brand-2);
+  border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:14px 18px;margin:16px 0;font-size:14.5px;color:var(--ink);
+}
+.quote-card cite{display:block;font-size:12.5px;color:var(--ink-3);font-style:normal;margin-top:6px}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;margin:16px 0;font-size:13.5px}
+.compare > div{padding:12px 14px}
+.compare .head{background:var(--surface-2);font-weight:800;color:var(--brand);font-size:13px}
+.compare .col-a{border-right:1px solid var(--line)}
+.compare .rowlabel{background:#faf7fd;color:var(--ink-3);font-weight:700;font-size:12.5px;grid-column:1/-1;padding:6px 14px;border-top:1px solid var(--line)}
+.compare > div:nth-child(2),.compare > div:nth-child(3){border-bottom:1px solid var(--line)}
+@media(max-width:520px){.compare{font-size:12.5px}}
+
+/* 编号步骤 */
+.steps{list-style:none;padding:0;margin:0;counter-reset:step}
+.steps li{position:relative;padding:0 0 16px 46px;counter-increment:step;border-left:2px solid var(--surface-2);margin-left:16px}
+.steps li:last-child{border-left-color:transparent;padding-bottom:0}
+.steps li::before{
+  content:counter(step);position:absolute;left:-17px;top:0;width:32px;height:32px;border-radius:50%;
+  background:var(--brand);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;
+}
+.steps li b{display:block;font-size:15px;margin-bottom:3px}
+.steps li p{font-size:13.5px;color:var(--ink-2);margin:0}
+
+/* FAQ */
+.faq details{border:1px solid var(--line);border-radius:var(--radius-sm);margin-bottom:10px;background:var(--surface-2);overflow:hidden}
+.faq summary{
+  padding:12px 16px;font-weight:700;font-size:14.5px;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:10px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:20px;color:var(--brand-2);font-weight:400;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq summary:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.faq .fa-body{padding:0 16px 14px;font-size:13.5px;color:var(--ink-2)}
+
+/* 评论 */
+.comments{display:grid;gap:14px}
+.comment{background:var(--surface-2);border-radius:var(--radius-sm);padding:13px 16px;border-left:3px solid var(--line)}
+.comment.pos{border-left-color:var(--ok)}
+.comment.neg{border-left-color:var(--warn)}
+.comment.neu{border-left-color:var(--brand-2)}
+.comment .c-head{display:flex;align-items:center;gap:9px;margin-bottom:5px;font-size:13px}
+.comment .avatar{width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center;font-weight:700;flex:none}
+.comment .who{font-weight:700;color:var(--ink)}
+.comment .when{color:var(--ink-3);font-size:12px;margin-left:auto}
+.comment p{margin:0;font-size:13.5px;color:var(--ink-2)}
+.comment .ref{color:var(--brand-2);font-weight:600}
+
+/* 资讯 */
+.news-list{list-style:none;padding:0;margin:0}
+.news-list li{display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.news-list li:last-child{border-bottom:none}
+.news-list .nou{color:var(--accent);font-weight:800;font-size:13px;min-width:26px}
+.news-list a{font-weight:600;color:var(--ink)}
+.news-list .nsum{font-size:12.5px;color:var(--ink-3);display:block}
+
+/* 推荐标签 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:8px}
+.rec-tags a{
+  font-size:13px;padding:6px 13px;border-radius:var(--radius-sm);background:#fbf3ff;
+  border:1px solid #eadcf7;color:var(--brand);font-weight:600;
+}
+.rec-tags a:hover{background:var(--brand);color:#fff;text-decoration:none}
+
+/* 榜单 */
+.rank-list{list-style:none;counter-reset:rk;padding:0;margin:0}
+.rank-list li{
+  counter-increment:rk;display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px;
+}
+.rank-list li:last-child{border-bottom:none}
+.rank-list li::before{
+  content:counter(rk);width:26px;height:26px;border-radius:8px;background:var(--surface-2);color:var(--brand);
+  font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;flex:none;
+}
+.rank-list li:nth-child(-n+3)::before{background:var(--accent);color:#2a0b3d}
+.rank-list .rk-name{font-weight:600}
+.rank-list .rk-score{margin-left:auto;color:var(--brand-2);font-weight:800;font-size:13px;white-space:nowrap}
+.rank-list .rk-note{color:var(--ink-3);font-size:12.5px;display:block}
+
+/* 页脚 */
+.site-footer{background:#1d1529;color:#c9bcd9;margin-top:36px;padding:36px 0 24px;font-size:13.5px}
+.footer-inner{max-width:1240px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
+.footer-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:16px;margin-bottom:10px}
+.footer-brand svg{width:30px;height:30px}
+.site-footer h4{color:#fff;font-size:14px;margin:0 0 10px}
+.site-footer ul{list-style:none;padding:0;margin:0}
+.site-footer li{margin-bottom:7px}
+.site-footer a{color:#c9bcd9;font-size:13px}
+.site-footer a:hover{color:var(--accent)}
+.footer-note{grid-column:1/-1;border-top:1px solid #372a4a;padding-top:16px;margin-top:6px;color:#8e819f;font-size:12.5px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+.footer-note .upd{color:#b9a8cc}
+@media(max-width:820px){.footer-inner{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.footer-inner{grid-template-columns:1fr}}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:18px;bottom:22px;width:44px;height:44px;border-radius:50%;
+  background:var(--brand);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  box-shadow:var(--shadow-lg);opacity:0;visibility:hidden;transform:translateY(8px);
+  transition:opacity .25s,transform .25s,visibility .25s;z-index:50;
+}
+.to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.to-top:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* 响应式布局 */
+@media(max-width:1024px){
+  .layout{grid-template-columns:minmax(0,1fr) 280px;gap:20px}
+}
+@media(max-width:900px){
+  .main-nav{display:none}
+  .menu-btn{display:flex}
+  .search-box input{width:140px}
+  .search-box input:focus{width:160px}
+  .layout{grid-template-columns:minmax(0,1fr)}
+  aside{position:static}
+  .col-side{order:2}
+}
+@media(max-width:560px){
+  .header-inner{gap:10px}
+  .brand{font-size:15px}
+  .search-box input{width:110px;font-size:12.5px}
+  .search-box input:focus{width:130px}
+  .search-result{width:240px}
+  .hero{border-radius:0;margin-left:-16px;margin-right:-16px;margin-top:-28px}
+  .hero p.lede{font-size:14px}
+  .update-row{flex-wrap:wrap;gap:4px 12px}
+  .update-row .date{min-width:auto}
+}
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+  .btn:hover,.feature-card:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="topbar">
+  <div class="wrap">
+    <span class="tag">更新</span>
+    <span class="ann">11月7日上新：<b>《星屑列车》第6话</b>作画监督访谈整理、秋叶原手办展 21 款新作实拍、冬番《雾港邮差》首支PV拆帧</span>
+    <a href="/#updates">全部更新</a>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/#top" aria-label="亚洲宅男福利社首页">
+      <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1b1b2f"/>
+        <circle cx="32" cy="30" r="15" fill="none" stroke="#ff6b9d" stroke-width="4"/>
+        <circle cx="26" cy="27" r="2.6" fill="#ffe08a"/>
+        <circle cx="38" cy="27" r="2.6" fill="#ffe08a"/>
+        <path d="M24 38c4 4 12 4 16 0" stroke="#ffe08a" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M20 12l4 5M44 12l-4 5" stroke="#8a3fb0" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span class="bname">亚洲宅男福利社</span>
+    </a>
+    <nav class="main-nav" aria-label="主题导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#featured">精选推荐</a>
+      <a href="/#updates">最新更新</a>
+      <a href="/#channels">分类入口</a>
+      <a href="/#analysis">深度解析</a>
+      <a href="/#faq">常见问答</a>
+    </nav>
+    <div class="header-tools">
+      <div class="search-box">
+        <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="#555" stroke-width="2"/><path d="M11 11l4 4" stroke="#555" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="search" id="siteSearch" placeholder="搜条目，如 雾港邮差" aria-label="站内搜索">
+        <div class="search-result" id="searchResult" role="listbox" aria-live="polite"></div>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="打开导航菜单" aria-expanded="false" aria-controls="mobileMenu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#4a4358" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <nav aria-label="移动端导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#featured">精选推荐</a>
+      <a href="/#updates">最新更新</a>
+      <a href="/#channels">分类入口</a>
+      <a href="/#analysis">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#comments">用户评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#rank">人气榜单</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="layout" id="top">
+    <main>
+
+      <!-- 首屏 -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <span class="kicker"><i></i>2026 冬番季 · 第 45 周精选</span>
+          <h1 id="hero-title">亚洲宅男福利社</h1>
+          <p class="lede">把新番、手办、同人展、Galgame 与收藏开销放进同一张表里看。每一条资源都标注平台、版本、日期与真实价格，帮你在下单前先算清楚值不值。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/#featured">看本周精选</a>
+            <a class="btn btn-ghost" href="/#guide">收藏避坑指南</a>
+          </div>
+          <div class="hero-stats">
+            <span><b>12</b>个常驻频道</span>
+            <span><b>186</b>条资源条目</span>
+            <span><b>11月7日</b>目录更新</span>
+            <span><b>4</b>城线下展讯</span>
+          </div>
+        </div>
+        <svg class="hero-art" viewBox="0 0 340 300" aria-hidden="true">
+          <defs>
+            <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff6b9d" stop-opacity=".85"/>
+              <stop offset="1" stop-color="#8a3fb0" stop-opacity=".3"/>
+            </linearGradient>
+          </defs>
+          <rect x="40" y="40" width="120" height="160" rx="12" fill="url(#hg1)" opacity=".55" transform="rotate(-8 100 120)"/>
+          <rect x="150" y="70" width="120" height="160" rx="12" fill="url(#hg1)" opacity=".75" transform="rotate(6 210 150)"/>
+          <rect x="110" y="120" width="130" height="150" rx="12" fill="#20142f" stroke="#ffe08a" stroke-width="2.5" transform="rotate(-3 175 195)"/>
+          <circle cx="175" cy="175" r="26" fill="none" stroke="#ff6b9d" stroke-width="4"/>
+          <circle cx="167" cy="170" r="3.4" fill="#ffe08a"/>
+          <circle cx="183" cy="170" r="3.4" fill="#ffe08a"/>
+          <path d="M165 186c6 6 16 6 22 0" stroke="#ffe08a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <circle cx="70" cy="250" r="5" fill="#ff6b9d"/>
+          <circle cx="290" cy="60" r="7" fill="#ffe08a" opacity=".8"/>
+          <circle cx="300" cy="235" r="4" fill="#8a3fb0"/>
+          <path d="M20 220l16-8 10 14" stroke="#ffe08a" stroke-width="2" fill="none" opacity=".6"/>
+        </svg>
+      </section>
+
+      <!-- 领域概览 -->
+      <section class="block" id="overview" aria-labelledby="ov-title">
+        <h2 id="ov-title">领域概览<span class="sub">截至 2026-11-08 的目录规模</span></h2>
+        <p>这里收录的主要是能“落到具体时间与价格”的二次元消费品：单行本、蓝光碟、PVC 手办、Galgame 汉化补丁、漫展门票与通贩周边。以下数字来自 11 月第一周的目录统计，方便先判断这个站点的覆盖范围。</p>
+        <div class="overview-grid">
+          <div class="ov-item"><b>186</b><span>在库资源条目（含 12 条待核）</span></div>
+          <div class="ov-item"><b>43</b><span>本周新增条目</span></div>
+          <div class="ov-item"><b>9</b><span>已录入手办厂商</span></div>
+          <div class="ov-item"><b>6</b><span>2026 冬番追踪作品</span></div>
+          <div class="ov-item"><b>2,180—18,600</b><span>日元，手办价格区间</span></div>
+          <div class="ov-item"><b>4</b><span>城市线下展讯（沪穗深港）</span></div>
+        </div>
+      </section>
+
+      <!-- 精选内容推荐 -->
+      <section class="block" id="featured" aria-labelledby="ft-title">
+        <h2 id="ft-title">精选内容推荐</h2>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <img src="https://picsum.photos/seed/anime-ep6/192/192" width="96" height="96" loading="lazy" alt="《星屑列车》第6话列车驾驶舱场景插画">
+            <div class="fc-body">
+              <span class="fc-tag">新番拆解</span>
+              <h3><a href="/#analysis">《星屑列车》第6话：作画监督为何换人</a></h3>
+              <p>第 6 话片尾表记从 A 组换到 B 组，中间片段口型与背景不同步处集中在 14 分 20 秒至 15 分 05 秒。</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img src="https://picsum.photos/seed/figure-autumn/192/192" width="96" height="96" loading="lazy" alt="秋叶原手办展上白裙角色PVC成品陈列照">
+            <div class="fc-body">
+              <span class="fc-tag">手办实拍</span>
+              <h3><a href="/#guide">秋叶原手办展 21 款新作：哪 4 款值得预订</a></h3>
+              <p>展会 11 月 3 日开幕，现场公布 21 款彩色原型，其中 4 款附赠特典，另 6 款仅展示灰模。</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img src="https://picsum.photos/seed/galgame-patch/192/192" width="96" height="96" loading="lazy" alt="Galgame汉化补丁更新日志截图">
+            <div class="fc-body">
+              <span class="fc-tag">汉化补丁</span>
+              <h3><a href="/#news">《雾港邮差》汉化补丁 v1.4.2 修了什么</a></h3>
+              <p>10 月 22 日发布，修正 37 处翻译错漏与 2 处字体缺字，新增章节标题统一排版。</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img src="https://picsum.photos/seed/comiket-win/192/192" width="96" height="96" loading="lazy" alt="同人展冬场摊位平面图局部">
+            <div class="fc-body">
+              <span class="fc-tag">展讯</span>
+              <h3><a href="/#guide">同人展冬场抽选结果：东馆新增两个馆</a></h3>
+              <p>11 月 5 日公布抽号，东馆 1—3 号馆满馆，新增东馆 4、5 号，摊位中签率约 1:3。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 最新更新 -->
+      <section class="block" id="updates" aria-labelledby="up-title">
+        <h2 id="up-title">最新更新<span class="sub">按日期倒序</span></h2>
+        <div class="updates">
+          <div class="update-row">
+            <span class="date">11月7日</span>
+            <div class="u-body">
+              <a href="/#analysis">《星屑列车》第6话制作人员变动整理</a>
+              <p>核对片头片尾表记，列出 A/B 两组负责的镜头范围与时长。</p>
+            </div>
+            <span class="badge">新番</span>
+          </div>
+          <div class="update-row">
+            <span class="date">11月6日</span>
+            <div class="u-body">
+              <a href="/#guide">秋叶原手办展实拍与价格表</a>
+              <p>21 款新作含税价、发售月、特典信息一次列清。</p>
+            </div>
+            <span class="badge">手办</span>
+          </div>
+          <div class="update-row">
+            <span class="date">11月5日</span>
+            <div class="u-body">
+              <a href="/#news">同人展冬场抽选号公布</a>
+              <p>东馆 1—3 号馆满馆，新增 4、5 号馆，附中签率估算。</p>
+            </div>
+            <span class="badge">展讯</span>
+          </div>
+          <div class="update-row">
+            <span class="date">11月3日</span>
+            <div class="u-body">
+              <a href="/#rank">10 月收藏热度榜发布</a>
+              <p>按条目浏览量、二手溢价与补货次数加权，榜首为《白鲸航线》男主景品。</p>
+            </div>
+            <span class="badge">榜单</span>
+          </div>
+          <div class="update-row">
+            <span class="date">10月30日</span>
+            <div class="u-body">
+              <a href="/#news">《雾港邮差》首支正式 PV 公开</a>
+              <p>时长 1 分 48 秒，公布 3 名主要声优与 2027 年 1 月档期。</p>
+            </div>
+            <span class="badge">冬番</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 分类入口 -->
+      <section class="block" id="channels" aria-labelledby="ch-title">
+        <h2 id="ch-title">分类入口</h2>
+        <p>按你实际会去搜的词分类，点进去看该类的条目清单与更新记录。数量为该分类当前在库条数。</p>
+        <div class="tag-index">
+          <a href="/#featured">新番导视 <span class="n">32</span></a>
+          <a href="/#guide">手办开箱 <span class="n">27</span></a>
+          <a href="/#channels">同人展情报 <span class="n">18</span></a>
+          <a href="/#channels">Galgame 汉化 <span class="n">21</span></a>
+          <a href="/#rank">景品与盒蛋 <span class="n">14</span></a>
+          <a href="/#channels">声优访谈 <span class="n">9</span></a>
+          <a href="/#analysis">作画监督拆解 <span class="n">12</span></a>
+          <a href="/#guide">二手交易避坑 <span class="n">16</span></a>
+          <a href="/#news">通贩与再版 <span class="n">11</span></a>
+          <a href="/#channels">漫改真人版 <span class="n">7</span></a>
+          <a href="/#channels">宅物收纳 <span class="n">5</span></a>
+          <a href="/#guide">海外代购税费 <span class="n">8</span></a>
+        </div>
+      </section>
+
+      <!-- 深度解析：唯一主体阅读区 -->
+      <article class="article-main" id="analysis" aria-labelledby="an-title">
+        <h2 id="an-title">深度解析：一支 TV 动画的“预算幻觉”</h2>
+        <p class="byline">更新于 2026-11-07 ｜ 依据：《星屑列车》第 1—6 话片头片尾表记、制作公司 10 月 18 日官方公告、第 6 话正片</p>
+
+        <p>“这集崩了，肯定是没钱。”这句话在本季《星屑列车》第 6 话播出后的两小时内，出现在至少三个讨论区。把镜头逐个对照表记看一遍，结论其实相反：<strong>第 6 话的作画张数比第 3 话多约 18%，问题出在镜头分配，而不是总预算。</strong></p>
+
+        <h3>事实层：表记里能直接数出来的东西</h3>
+        <p>第 6 话片头后的作画监督栏列出两人，而第 3 话只列一人。第 6 话片尾的原画名单从 12 人增到 19 人，其中 7 人首次出现在本作表记中。制作公司 10 月 18 日的公告写明，第 5、6 话进入“两班并行”状态，B 组负责第 6 话的中段动作戏。</p>
+        <div class="quote-card">
+          “第 6 话采用 A/B 两班并行，B 组负责 12 分至 16 分的动作段落，本社作画部全员参与。”<cite>——制作公司 10 月 18 日制作进度公告，原文措辞</cite>
+        </div>
+        <p>可核对的时间线是：10 月 18 日公告发布两班制；10 月 25 日第 5 话播出，片尾出现 3 名外包原画；11 月 1 日第 6 话播出，口型与背景不同步的 45 秒集中在 14 分 20 秒至 15 分 05 秒。这段正好落在 B 组负责区间内。</p>
+
+        <h3>对比层：第 3 话与第 6 话的分配差异</h3>
+        <div class="compare" role="table" aria-label="第3话与第6话制作资源对照">
+          <div class="head col-a">项目</div>
+          <div class="head">第 3 话 / 第 6 话</div>
+          <div class="rowlabel">作画监督</div>
+          <div class="col-a">1 人</div>
+          <div>2 人</div>
+          <div class="rowlabel">原画名单</div>
+          <div class="col-a">12 人</div>
+          <div>19 人（7 名新面孔）</div>
+          <div class="rowlabel">总作画张数（估算）</div>
+          <div class="col-a">约 3,400 张</div>
+          <div>约 4,000 张</div>
+          <div class="rowlabel">问题镜头时长</div>
+          <div class="col-a">无明显集中区段</div>
+          <div>45 秒（14:20—15:05）</div>
+          <div class="rowlabel">外包参与</div>
+          <div class="col-a">无</div>
+          <div>3 名外包原画</div>
+        </div>
+        <p>差异集中在两处：一是第 6 话多出的 7 名新原画需要额外的作监修正，二是 45 秒问题镜头全部落在同一班组的区间。张数增加、人员增加、问题也增加，三条同时成立，说明瓶颈在修正环节的排期，不在总经费。</p>
+
+        <h3>说法差异：三种流传的版本各自缺什么</h3>
+        <p>第一版说法是“制作委员会砍预算”，来源是某论坛 10 月 20 日的匿名帖，未附任何文件。第二版说法是“外包公司交稿延期”，来源是一位自称参与第 6 话的原画在社交平台发的短帖，11 月 2 日删除。第三版说法是“两班制是常规操作，不必过度解读”，来自本作制片人在 10 月 30 日广播节目里的回应。</p>
+        <ul>
+          <li><strong>预算削减：</strong>若总预算下降，张数应同步减少；实际第 6 话张数更多，与说法矛盾。</li>
+          <li><strong>外包延期：</strong>时间点吻合，但缺少交付日期证据，只能列为推测。</li>
+          <li><strong>制片人回应：</strong>属制作方立场转述，未给出具体排期表，可信但不足以覆盖前两种。</li>
+        </ul>
+        <p>可被反驳的判断在这里：<strong>把第 6 话的问题归因于“没钱”，在现有证据下站不住；更贴近事实的解释是两班并行时，作画监督修正的排期没跟上新增原画的节奏。</strong>如果有人能拿出第 6 话的预算表或外包交付记录，这个判断就该改。</p>
+
+        <h3>对观众的实用结论</h3>
+        <p>第 7 话片尾若作画监督回到 1 人、原画名单回到 13 人以内，说明两班制只是第 5、6 话的临时安排，后续质量有望回升。反之，若第 7 话仍列两名作监且新增原画超过 6 人，则修正环节的压力会延续到第 8 话。判断方法很直接：看表记，不看弹幕。</p>
+      </article>
+
+      <!-- 体验指南：编号步骤 -->
+      <section class="block" id="guide" aria-labelledby="gd-title">
+        <h2 id="gd-title">体验指南：手办预订到收货的 5 步核对法</h2>
+        <p>以 11 月 3 日秋叶原手办展公布的 21 款新作为例，从看到原型到收到盒子，中间有五个容易漏掉的核对点。</p>
+        <ol class="steps">
+          <li>
+            <b>先确认发售月份，再看价格</b>
+            <p>展会现场标价多为含税价，21 款里 6 款标“未定”，4 款写明 2027 年 3 月发售，其余集中在 2027 年 1—2 月。未定价格的条目不要先付定金。</p>
+          </li>
+          <li>
+            <b>区分彩色原型与灰模</b>
+            <p>21 款中 15 款为彩色原型，6 款为灰模。灰模的涂装、表情细节都可能在量产时改动，预订前找官方发布的彩色图。</p>
+          </li>
+          <li>
+            <b>核对特典归属店铺</b>
+            <p>4 款附赠特典的条目，特典图只在特定通贩店提供，展板上用小字标注店名。拍下展板小字，避免收货后才发现没有特典。</p>
+          </li>
+          <li>
+            <b>算清海外代购税费</b>
+            <p>单件手办含税价超过 1 万日元时，代购综合成本通常上浮 12%—18%，含国际运费与可能的关税。18,600 日元的高价位款要单独比价。</p>
+          </li>
+          <li>
+            <b>收货后 48 小时内验货</b>
+            <p>重点看涂装溢色、关节松动、底座卡榫。二手市场对开封品折价约 20%—30%，未拆封保留运输盒更容易转手。</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- FAQ -->
+      <section class="block faq" id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">常见问答</h2>
+        <details>
+          <summary>《星屑列车》第 6 话的问题镜头具体在哪一段？</summary>
+          <div class="fa-body">集中在正片 14 分 20 秒至 15 分 05 秒，共约 45 秒。表现为角色口型与台词不同步、背景列车窗户透视偏移。该段落属于 B 组负责区间，片尾表记可对照。</div>
+        </details>
+        <details>
+          <summary>秋叶原手办展的 21 款新作里，哪几款有特典？</summary>
+          <div class="fa-body">共 4 款附赠特典，分别是白裙角色款、黑礼服款、双人组合款与限定配色款。特典为替换表情或亚克力立牌，仅指定通贩店提供，展板右下角有店铺名小字。</div>
+        </details>
+        <details>
+          <summary>Galgame 汉化补丁 v1.4.2 需要重开存档吗？</summary>
+          <div class="fa-body">不需要。v1.4.2 于 10 月 22 日发布，修正 37 处翻译错漏与 2 处字体缺字，存档结构未变。若此前用过 v1.3 之前的版本，建议先备份 save 文件夹再覆盖。</div>
+        </details>
+        <details>
+          <summary>同人展冬场东馆新增的两个馆怎么走？</summary>
+          <div class="fa-body">东馆 4、5 号位于原东馆 3 号北侧连廊尽头，从东馆 3 号出口步行约 4 分钟。抽选号公布时附有平面图，新增馆的摊位中签率估算在 1:2.6 左右，略高于主馆。</div>
+        </details>
+        <details>
+          <summary>景品和 PVC 手办的价格差为什么能到十倍？</summary>
+          <div class="fa-body">景品多为抓娃娃机奖品，单只成本控制在 2,000 日元以内，涂装与分件较简单；PVC 手办含税价常见 12,000—18,600 日元，差异来自原型师费用、分件数量、涂装工序与限量发行。10 月热度榜榜首的《白鲸航线》男主景品正是低价高流通的代表。</div>
+        </details>
+      </section>
+
+      <!-- 用户评论 -->
+      <section class="block" id="comments" aria-labelledby="cm-title">
+        <h2 id="cm-title">用户评论<span class="sub">本周 6 条，含中性意见</span></h2>
+        <div class="comments">
+          <div class="comment pos">
+            <div class="c-head"><span class="avatar">岚</span><span class="who">岚之谷</span><span class="when">11月7日</span></div>
+            <p>第 6 话那段 45 秒我也暂停看了，<span class="ref">14:20 到 15:05</span> 的口型确实对不上，但动作戏的张数明显比第 3 话密。说“没钱”有点冤。</p>
+          </div>
+          <div class="comment neg">
+            <div class="c-head"><span class="avatar">K</span><span class="who">K 记面包</span><span class="when">11月7日</span></div>
+            <p>手办展那 4 款特典款，展板小字小到要蹲下拍。<span class="ref">黑礼服款</span>的特典店名我拍了三张才看清，现场标识能不能做大点。</p>
+          </div>
+          <div class="comment neu">
+            <div class="c-head"><span class="avatar">柚</span><span class="who">柚子汽水</span><span class="when">11月6日</span></div>
+            <p>汉化补丁 v1.4.2 装上后字体缺字问题没了，但<span class="ref">第 3 章标题</span>的行距变了，看着有点挤。不影响读，就是得适应。</p>
+          </div>
+          <div class="comment pos">
+            <div class="c-head"><span class="avatar">阿</span><span class="who">阿宅阿满</span><span class="when">11月5日</span></div>
+            <p>冬场抽选中了东馆 5 号，新增馆确实人少。<span class="ref">1:2.6 的中签率</span>和实际体感差不多，主馆那边排队绕了两圈。</p>
+          </div>
+          <div class="comment neg">
+            <div class="c-head"><span class="avatar">D</span><span class="who">D 开头的猫</span><span class="when">11月4日</span></div>
+            <p>10 月热度榜把<span class="ref">《白鲸航线》男主景品</span>排第一，我不太服。二手溢价高不等于做工好，景品就是景品。</p>
+          </div>
+          <div class="comment neu">
+            <div class="c-head"><span class="avatar">纸</span><span class="who">纸飞机</span><span class="when">11月3日</span></div>
+            <p>代购税费那段算得挺实在，<span class="ref">18% 上限</span>我上个月刚好踩到。不过不同代购抽成差得多，建议再分个档。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 相关资讯 -->
+      <section class="block" id="news" aria-labelledby="nw-title">
+        <h2 id="nw-title">相关资讯</h2>
+        <ul class="news-list">
+          <li><span class="nou">01</span><div><a href="/#featured">《雾港邮差》首支 PV 公开，2027 年 1 月档期</a><span class="nsum">10 月 30 日上线，1 分 48 秒，公布 3 名主要声优</span></div></li>
+          <li><span class="nou">02</span><div><a href="/#channels">《白鲸航线》男主景品宣布再版</a><span class="nsum">11 月 2 日通贩公告，预计 2027 年 2 月出货</span></div></li>
+          <li><span class="nou">03</span><div><a href="/#guide">同人展冬场摊位图更新至 v3</a><span class="nsum">11 月 5 日修订，东馆 4、5 号馆新增通道标注</span></div></li>
+          <li><span class="nou">04</span><div><a href="/#channels">声优访谈：第 6 话录音现场细节</a><span class="nsum">11 月 6 日发布，提及两班制对配音排期的影响</span></div></li>
+          <li><span class="nou">05</span><div><a href="/#news">《星屑列车》蓝光第一卷封面公开</a><span class="nsum">11 月 7 日公布，收录第 1—3 话与制作花絮</span></div></li>
+        </ul>
+      </section>
+
+      <!-- 相关推荐 -->
+      <section class="block" id="recommend" aria-labelledby="rc-title">
+        <h2 id="rc-title">相关推荐</h2>
+        <div class="rec-tags">
+          <a href="/#analysis">星屑列车第6话作画拆解</a>
+          <a href="/#guide">手办彩色原型与灰模区别</a>
+          <a href="/#channels">Galgame汉化补丁更新记录</a>
+          <a href="/#guide">同人展东馆新增通道</a>
+          <a href="/#news">雾港邮差PV拆帧</a>
+          <a href="/#rank">景品二手溢价观察</a>
+          <a href="/#guide">海外代购税费计算</a>
+          <a href="/#channels">声优访谈录音现场</a>
+          <a href="/#channels">宅物收纳防尘方案</a>
+        </div>
+      </section>
+
+      <!-- 补充板块：榜单 -->
+      <section class="block" id="rank" aria-labelledby="rk-title">
+        <h2 id="rk-title">10 月收藏热度榜<span class="sub">浏览量 + 二手溢价 + 补货次数加权</span></h2>
+        <ol class="rank-list">
+          <li><span class="rk-name">《白鲸航线》男主景品</span><span class="rk-score">92.4</span><span class="rk-note">二手溢价 1.9 倍，补货 3 次</span></li>
+          <li><span class="rk-name">白裙角色款 PVC 手办</span><span class="rk-score">87.1</span><span class="rk-note">展会限定特典，未拆封转手加价约 22%</span></li>
+          <li><span class="rk-name">《星屑列车》第 1 话分镜集</span><span class="rk-score">81.6</span><span class="rk-note">通贩首刷附明信片，10 月 19 日售罄</span></li>
+          <li><span class="rk-name">《雾港邮差》体验版</span><span class="rk-score">76.8</span><span class="rk-note">10 月 26 日上架，免费下载</span></li>
+          <li><span class="rk-name">黑礼服款限定配色</span><span class="rk-score">71.2</span><span class="rk-note">仅指定店铺，特典为替换表情</span></li>
+          <li><span class="rk-name">同人展冬场场刊</span><span class="rk-score">68.5</span><span class="rk-note">11 月 5 日电子版更新</span></li>
+        </ol>
+      </section>
+
+    </main>
+
+    <!-- 侧栏 -->
+    <aside class="col-side" aria-label="侧栏导航与快捷入口">
+      <div class="side-card">
+        <h3>栏目导航</h3>
+        <ul class="side-nav" id="sideNav">
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#featured">精选内容推荐</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#analysis">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#rank">10 月热度榜</a></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <h3>本周高频搜索</h3>
+        <ul class="side-list">
+          <li><a href="/#analysis">星屑列车第6话作画监督</a><span class="meta">11月7日 · 新番</span></li>
+          <li><a href="/#guide">秋叶原手办展特典店铺</a><span class="meta">11月6日 · 手办</span></li>
+          <li><a href="/#news">雾港邮差汉化补丁</a><span class="meta">11月6日 · 汉化</span></li>
+          <li><a href="/#guide">同人展冬场中签率</a><span class="meta">11月5日 · 展讯</span></li>
+          <li><a href="/#rank">白鲸航线景品再版</a><span class="meta">11月2日 · 通贩</span></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <h3>目录维护说明</h3>
+        <p style="font-size:13px;color:var(--ink-2);margin:0">条目价格以日元含税价标注，汇率按 2026 年 11 月 1 日中间价折算。待核条目 12 条，标注为“待核”的不进入榜单统计。</p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- 页脚 -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#2b1c40"/>
+          <circle cx="32" cy="30" r="15" fill="none" stroke="#ff6b9d" stroke-width="4"/>
+          <circle cx="26" cy="27" r="2.6" fill="#ffe08a"/>
+          <circle cx="38" cy="27" r="2.6" fill="#ffe08a"/>
+          <path d="M24 38c4 4 12 4 16 0" stroke="#ffe08a" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        亚洲宅男福利社
+      </div>
+      <p style="margin:0;color:#a99bbb;font-size:13px">把每一笔宅物开销拆成条目、日期与价格，让下单前的犹豫有据可查。</p>
+    </div>
+    <div>
+      <h4>内容栏目</h4>
+      <ul>
+        <li><a href="/#featured">新番导视</a></li>
+        <li><a href="/#guide">手办开箱</a></li>
+        <li><a href="/#channels">同人展情报</a></li>
+        <li><a href="/#channels">Galgame 汉化</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>实用工具</h4>
+      <ul>
+        <li><a href="/#guide">预订核对清单</a></li>
+        <li><a href="/#guide">代购税费估算</a></li>
+        <li><a href="/#rank">收藏热度榜</a></li>
+        <li><a href="/#faq">常见问答</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>关于内容</h4>
+      <ul>
+        <li><a href="/#overview">目录规模说明</a></li>
+        <li><a href="/#comments">用户评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#updates">更新记录</a></li>
+      </ul>
+    </div>
+    <div class="footer-note">
+      <span>示例数据说明：本页条目、价格、展讯与评论均为演示用示例数据，日期分布在 2026 年 10 月 9 日至 11 月 8 日之间，不构成购买或出行建议。</span>
+      <span class="upd">正文可核对更新项：11 月 7 日《星屑列车》第 6 话表记整理、11 月 6 日手办展价格表、11 月 5 日冬场抽选号 ｜ 页脚更新于 2026-11-08</span>
+      <span>© 2026 亚洲宅男福利社 · 内容仅供二次元消费参考</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 5v14M6 11l6-6 6 6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端菜单 */
+  var menuBtn = document.getElementById('menuBtn');
+  var mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', function(){
+    var open = mobileMenu.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuBtn.setAttribute('aria-label', open ? '关闭导航菜单' : '打开导航菜单');
+  });
+  mobileMenu.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      mobileMenu.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+      menuBtn.setAttribute('aria-label','打开导航菜单');
+    }
+  });
+
+  /* 本地搜索 */
+  var input = document.getElementById('siteSearch');
+  var result = document.getElementById('searchResult');
+  var index = [];
+  document.querySelectorAll('main a[href^="/#"], aside a[href^="/#"]').forEach(function(a){
+    var text = (a.textContent || '').replace(/\s+/g,' ').trim();
+    if(text && text.length > 1){
+      index.push({text: text, href: a.getAttribute('href')});
+    }
+  });
+  var seen = {};
+  index = index.filter(function(item){
+    if(seen[item.text + item.href]) return false;
+    seen[item.text + item.href] = 1;
+    return true;
+  });
+
+  function renderResult(q){
+    var kw = q.trim().toLowerCase();
+    if(!kw){
+      result.classList.remove('show');
+      result.innerHTML = '';
+      return;
+    }
+    var hits = index.filter(function(item){
+      return item.text.toLowerCase().indexOf(kw) > -1;
+    }).slice(0, 8);
+    if(hits.length === 0){
+      result.innerHTML = '<div class="empty">没有找到与「<b>' + escapeHtml(q.trim()) + '</b>」相关的条目，试试「手办」「星屑列车」「汉化补丁」。</div>';
+    }else{
+      result.innerHTML = hits.map(function(h){
+        return '<a href="' + h.href + '">' + escapeHtml(h.text) + '</a>';
+      }).join('');
+    }
+    result.classList.add('show');
+  }
+  function escapeHtml(s){
+    return s.replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+  input.addEventListener('input', function(){ renderResult(input.value); });
+  input.addEventListener('focus', function(){ if(input.value.trim()) renderResult(input.value); });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.search-box')){ result.classList.remove('show'); }
+  });
+  input.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ result.classList.remove('show'); input.blur(); }
+  });
+  result.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      result.classList.remove('show');
+      input.value = '';
+    }
+  });
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    if(window.pageYOffset > 420){ toTop.classList.add('show'); }
+    else{ toTop.classList.remove('show'); }
+    highlightSide();
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  toTop.addEventListener('click', function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'});
+  });
+
+  /* 侧栏滚动高亮 */
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = sideLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  }).filter(Boolean);
+  function highlightSide(){
+    var pos = window.pageYOffset + 140;
+    var cur = null;
+    sections.forEach(function(sec){
+      if(sec.offsetTop <= pos){ cur = sec.id; }
+    });
+    sideLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '/#' + cur);
+    });
+  }
+  highlightSide();
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "亚洲宅男福利社",
+  "alternateName": "亚洲宅男福利社·二次元资源与宅文化指南",
+  "description": "二次元资源整理与宅文化消费指南，覆盖新番导视、手办开箱、同人展情报、Galgame 汉化与收藏避坑。",
+  "inLanguage": "zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "《星屑列车》第 6 话的问题镜头具体在哪一段？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "集中在正片 14 分 20 秒至 15 分 05 秒，共约 45 秒，表现为角色口型与台词不同步、背景列车窗户透视偏移，该段落属于 B 组负责区间。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "秋叶原手办展的 21 款新作里，哪几款有特典？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "共 4 款附赠特典，分别是白裙角色款、黑礼服款、双人组合款与限定配色款，特典仅指定通贩店提供。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Galgame 汉化补丁 v1.4.2 需要重开存档吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不需要，v1.4.2 于 10 月 22 日发布，修正 37 处翻译错漏与 2 处字体缺字，存档结构未变。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "同人展冬场东馆新增的两个馆怎么走？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "东馆 4、5 号位于原东馆 3 号北侧连廊尽头，从东馆 3 号出口步行约 4 分钟，新增馆摊位中签率估算在 1:2.6 左右。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "景品和 PVC 手办的价格差为什么能到十倍？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "景品单只成本控制在 2,000 日元以内，涂装与分件较简单；PVC 手办含税价常见 12,000—18,600 日元，差异来自原型师费用、分件数量与限量发行。"
+      }
+    }
+  ]
+}
+</script>
+</body>
+  </html>
